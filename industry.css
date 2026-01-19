@@ -1,0 +1,347 @@
+/* Industry Page Styles */
+
+.industry-page {
+    min-height: 100vh;
+    background: #f5f7fa;
+}
+
+.industry-hero {
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.industry-hero h1 {
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.industry-hero .subtitle {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.industry-nav {
+    background: white;
+    border-bottom: 1px solid #e0e0e0;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    overflow-x: auto;
+}
+
+.industry-nav-inner {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.industry-nav a {
+    flex: 1;
+    padding: 0.75rem 0.5rem;
+    text-align: center;
+    text-decoration: none;
+    color: #666;
+    font-size: 0.75rem;
+    font-weight: 500;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s;
+    white-space: nowrap;
+}
+
+.industry-nav a:hover {
+    color: #3498db;
+    background: #f8f9fa;
+}
+
+.industry-nav a.active {
+    color: #3498db;
+    border-bottom-color: #3498db;
+}
+
+.industry-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1.5rem 1rem;
+}
+
+.industry-section {
+    background: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.industry-section h2 {
+    font-size: 1.25rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #3498db;
+}
+
+.industry-section h3 {
+    font-size: 1rem;
+    color: #2c3e50;
+    margin: 1.25rem 0 0.75rem;
+}
+
+.industry-section p {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: #444;
+    margin-bottom: 1rem;
+}
+
+.industry-section ul,
+.industry-section ol {
+    margin: 0.75rem 0 1rem 1.5rem;
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: #444;
+}
+
+.industry-section li {
+    margin-bottom: 0.5rem;
+}
+
+/* Lever Cards */
+.lever-grid {
+    display: grid;
+    gap: 1rem;
+}
+
+.lever-card {
+    background: #f8f9fa;
+    border-radius: 6px;
+    padding: 1rem;
+    border-left: 4px solid #3498db;
+}
+
+.lever-card.revenue {
+    border-left-color: #3498db;
+}
+
+.lever-card.cost {
+    border-left-color: #27ae60;
+}
+
+.lever-card.process {
+    border-left-color: #8e44ad;
+}
+
+.lever-card h4 {
+    font-size: 0.95rem;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.lever-card .lever-tag {
+    font-size: 0.6rem;
+    padding: 0.15rem 0.4rem;
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.lever-card.revenue .lever-tag {
+    background: #e8f4fc;
+    color: #2980b9;
+}
+
+.lever-card.cost .lever-tag {
+    background: #e8f8f0;
+    color: #1e8449;
+}
+
+.lever-card.process .lever-tag {
+    background: #f5eef8;
+    color: #7d3c98;
+}
+
+.lever-card p {
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+}
+
+.lever-card ul {
+    margin: 0.5rem 0 0 1.25rem;
+    font-size: 0.8rem;
+}
+
+.lever-link {
+    display: inline-block;
+    margin-top: 0.5rem;
+    font-size: 0.75rem;
+    color: #3498db;
+    text-decoration: none;
+}
+
+.lever-link:hover {
+    text-decoration: underline;
+}
+
+/* Metrics Table */
+.metrics-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+    margin: 1rem 0;
+}
+
+.metrics-table th,
+.metrics-table td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.metrics-table th {
+    background: #f8f9fa;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.metrics-table tr:hover td {
+    background: #f8f9fa;
+}
+
+/* Pitfalls */
+.pitfall-item {
+    background: #fff5f5;
+    border-left: 4px solid #e74c3c;
+    padding: 1rem;
+    margin-bottom: 0.75rem;
+    border-radius: 0 6px 6px 0;
+}
+
+.pitfall-item h4 {
+    font-size: 0.9rem;
+    color: #c0392b;
+    margin-bottom: 0.25rem;
+}
+
+.pitfall-item p {
+    font-size: 0.85rem;
+    margin: 0;
+    color: #666;
+}
+
+/* Case Studies */
+.case-study {
+    background: #f0f8ff;
+    border: 1px solid #d4e6f1;
+    border-radius: 8px;
+    padding: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.case-study h4 {
+    font-size: 1rem;
+    color: #2c3e50;
+    margin-bottom: 0.25rem;
+}
+
+.case-study .case-meta {
+    font-size: 0.75rem;
+    color: #666;
+    margin-bottom: 0.75rem;
+}
+
+.case-study p {
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+}
+
+.case-study .case-result {
+    background: #d4edda;
+    color: #155724;
+    padding: 0.5rem 0.75rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    display: inline-block;
+    margin-top: 0.5rem;
+}
+
+/* Back to Matrix Link */
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #3498db;
+    text-decoration: none;
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .industry-hero {
+        padding: 1.5rem 1rem;
+    }
+
+    .industry-hero h1 {
+        font-size: 1.4rem;
+    }
+
+    .industry-nav a {
+        padding: 0.6rem 0.75rem;
+        font-size: 0.7rem;
+    }
+
+    .industry-section {
+        padding: 1rem;
+    }
+
+    .industry-section h2 {
+        font-size: 1.1rem;
+    }
+}
+
+/* Tablet & Desktop */
+@media (min-width: 768px) {
+    .industry-hero {
+        padding: 3rem 2rem;
+    }
+
+    .industry-hero h1 {
+        font-size: 2.25rem;
+    }
+
+    .industry-hero .subtitle {
+        font-size: 1.1rem;
+    }
+
+    .industry-nav a {
+        padding: 1rem 1.5rem;
+        font-size: 0.85rem;
+    }
+
+    .industry-content {
+        padding: 2rem;
+    }
+
+    .industry-section {
+        padding: 2rem;
+    }
+
+    .lever-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1200px) {
+    .lever-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

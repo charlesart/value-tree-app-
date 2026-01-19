@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Value Creation Tree</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Value Creation</h1>
+        <nav id="nav">
+            <a href="#" data-tree="revenue" class="active">Revenue</a>
+            <a href="#" data-tree="cost">Cost</a>
+            <a href="#" data-tree="process">Process</a>
+            <a href="matrix.html">Matrix</a>
+            <div class="nav-dropdown">
+                <a href="#" class="dropdown-trigger">Industries</a>
+                <div class="dropdown-menu">
+                    <a href="industry-healthcare.html">Healthcare</a>
+                    <a href="industry-saas.html">SaaS</a>
+                    <a href="industry-retail.html">Retail / CPG</a>
+                    <a href="industry-services.html">Business Services</a>
+                </div>
+            </div>
+        </nav>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <div class="controls">
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search nodes..." autocomplete="off">
+            <div class="search-results" id="searchResults"></div>
+        </div>
+        <button id="expandAll">Expand All</button>
+        <button id="collapseAll">Collapse All</button>
+        <button id="resetView">Reset</button>
+        <label class="edit-toggle">
+            <input type="checkbox" id="editModeCheckbox">
+            <span class="toggle-slider"></span>
+            <span class="toggle-label">Edit Mode</span>
+        </label>
+    </div>
+
+    <div class="canvas-container" id="canvasContainer">
+        <div class="tree-canvas" id="treeCanvas">
+            <div class="tree" id="tree"></div>
+        </div>
+    </div>
+
+    <!-- Side Panel -->
+    <div class="side-panel" id="sidePanel">
+        <div class="side-panel-header">
+            <div class="breadcrumb" id="panelBreadcrumb"></div>
+            <button class="close-panel" id="closePanel">&times;</button>
+        </div>
+        <div class="side-panel-title-section">
+            <h2 class="panel-title" id="panelTitle"></h2>
+            <div class="panel-description" id="panelDescription"></div>
+            <button class="print-btn" id="printNodeBtn" title="Print / Save as PDF">Print</button>
+        </div>
+        <div class="panel-tabs">
+            <button class="panel-tab active" data-tab="overview">Overview</button>
+            <button class="panel-tab" data-tab="diagnostic">Diagnostic</button>
+            <button class="panel-tab" data-tab="cases">Cases</button>
+            <button class="panel-tab" data-tab="sources">Sources</button>
+        </div>
+        <div class="side-panel-content">
+            <!-- Rich Text Toolbar (shown in edit mode) -->
+            <div class="rich-text-toolbar" id="richTextToolbar">
+                <select id="headingSelect">
+                    <option value="">Paragraph</option>
+                    <option value="h1">Heading 1</option>
+                    <option value="h2">Heading 2</option>
+                    <option value="h3">Heading 3</option>
+                </select>
+                <button type="button" data-command="bold" title="Bold"><b>B</b></button>
+                <button type="button" data-command="italic" title="Italic"><i>I</i></button>
+                <button type="button" data-command="underline" title="Underline"><u>U</u></button>
+                <button type="button" data-command="insertUnorderedList" title="Bullet List">•</button>
+                <button type="button" data-command="insertOrderedList" title="Numbered List">1.</button>
+                <button type="button" data-command="createLink" title="Insert Link">🔗</button>
+                <button type="button" data-command="insertImage" title="Insert Image">🖼</button>
+            </div>
+
+            <!-- Overview Tab -->
+            <div class="tab-content active" id="tabOverview" data-tab="overview">
+                <div class="content-section">
+                    <h3 class="section-title">Overview</h3>
+                    <div class="section-content editable-section" id="contentOverview" data-field="overview"></div>
+                </div>
+                <div class="content-section">
+                    <h3 class="section-title">Contribution to Value</h3>
+                    <div class="section-content editable-section" id="contentContribution" data-field="contributionToValue"></div>
+                </div>
+                <div class="content-section">
+                    <h3 class="section-title">Logical Flow</h3>
+                    <div class="section-content editable-section" id="contentLogicalFlow" data-field="logicalFlow"></div>
+                </div>
+            </div>
+
+            <!-- Diagnostic Tab -->
+            <div class="tab-content" id="tabDiagnostic" data-tab="diagnostic">
+                <div class="content-section">
+                    <h3 class="section-title">Key Diagnostic Questions</h3>
+                    <div class="list-section" id="diagnosticQuestions" data-field="diagnostic.keyQuestions"></div>
+                    <button class="add-item-btn" data-target="diagnosticQuestions" style="display:none;">+ Add Question</button>
+                </div>
+                <div class="content-section">
+                    <h3 class="section-title">Implementation Steps</h3>
+                    <div class="list-section" id="implementationSteps" data-field="diagnostic.implementationSteps"></div>
+                    <button class="add-item-btn" data-target="implementationSteps" style="display:none;">+ Add Step</button>
+                </div>
+                <div class="content-section">
+                    <h3 class="section-title">Common Pitfalls</h3>
+                    <div class="list-section" id="pitfalls" data-field="diagnostic.pitfalls"></div>
+                    <button class="add-item-btn" data-target="pitfalls" style="display:none;">+ Add Pitfall</button>
+                </div>
+            </div>
+
+            <!-- Cases Tab -->
+            <div class="tab-content" id="tabCases" data-tab="cases">
+                <div class="cases-container" id="casesContainer"></div>
+                <button class="add-case-btn" id="addCaseBtn" style="display:none;">+ Add Case Example</button>
+            </div>
+
+            <!-- Sources Tab -->
+            <div class="tab-content" id="tabSources" data-tab="sources">
+                <div class="sources-container" id="sourcesContainer"></div>
+                <button class="add-source-btn" id="addSourceBtn" style="display:none;">+ Add Source</button>
+            </div>
+        </div>
+    </div>
+    <div class="side-panel-overlay" id="sidePanelOverlay"></div>
+
+    <!-- PIN Modal -->
+    <div class="modal-overlay" id="pinModalOverlay">
+        <div class="modal" id="pinModal">
+            <h3 id="pinModalTitle">Enter PIN</h3>
+            <p id="pinModalDesc">Enter 4-digit PIN to access edit mode</p>
+            <input type="password" id="pinInput" maxlength="4" pattern="[0-9]*" inputmode="numeric" placeholder="••••">
+            <div class="modal-buttons">
+                <button id="pinCancel">Cancel</button>
+                <button id="pinSubmit">Submit</button>
+            </div>
+            <p class="pin-error" id="pinError"></p>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

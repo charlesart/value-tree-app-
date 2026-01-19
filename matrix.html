@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Value Creation Matrix</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="matrix.css">
+</head>
+<body>
+    <header>
+        <h1>Value Creation</h1>
+        <nav id="nav">
+            <a href="index.html">Revenue</a>
+            <a href="cost.html" class="disabled">Cost</a>
+            <a href="process.html" class="disabled">Process</a>
+            <a href="matrix.html" class="active">Matrix</a>
+            <div class="nav-dropdown">
+                <a href="#" class="dropdown-trigger">Industries</a>
+                <div class="dropdown-menu">
+                    <a href="industry-healthcare.html">Healthcare</a>
+                    <a href="industry-saas.html">SaaS</a>
+                    <a href="industry-retail.html">Retail / CPG</a>
+                    <a href="industry-services.html">Business Services</a>
+                </div>
+            </div>
+        </nav>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <div class="matrix-container">
+        <div class="matrix-header">
+            <h2>Value Creation Matrix</h2>
+            <p>Click any cell to explore industry-specific strategies</p>
+        </div>
+
+        <div class="matrix-wrapper">
+            <table class="matrix-table">
+                <thead>
+                    <tr>
+                        <th class="corner-cell"></th>
+                        <th colspan="3" class="group-header revenue-header">Revenue</th>
+                        <th colspan="2" class="group-header cost-header">Cost</th>
+                        <th colspan="1" class="group-header process-header">Process</th>
+                    </tr>
+                    <tr>
+                        <th class="industry-header">Industry</th>
+                        <th class="lever-header">Price</th>
+                        <th class="lever-header">Volume</th>
+                        <th class="lever-header">Mix</th>
+                        <th class="lever-header">COGS</th>
+                        <th class="lever-header">OpEx</th>
+                        <th class="lever-header">Ops</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="industry-cell">
+                            <a href="industry-healthcare.html">Healthcare</a>
+                        </td>
+                        <td class="matrix-cell high" data-industry="healthcare" data-lever="price">
+                            <span class="relevance">High</span>
+                            <span class="tactic">Payer mix optimization</span>
+                        </td>
+                        <td class="matrix-cell high" data-industry="healthcare" data-lever="volume">
+                            <span class="relevance">High</span>
+                            <span class="tactic">Patient acquisition</span>
+                        </td>
+                        <td class="matrix-cell medium" data-industry="healthcare" data-lever="mix">
+                            <span class="relevance">Med</span>
+                            <span class="tactic">Service line focus</span>
+                        </td>
+                        <td class="matrix-cell medium" data-industry="healthcare" data-lever="cogs">
+                            <span class="relevance">Med</span>
+                            <span class="tactic">Supply chain</span>
+                        </td>
+                        <td class="matrix-cell high" data-industry="healthcare" data-lever="opex">
+                            <span class="relevance">High</span>
+                            <span class="tactic">Labor efficiency</span>
+                        </td>
+                        <td class="matrix-cell high" data-industry="healthcare" data-lever="ops">
+                            <span class="relevance">High</span>
+                            <span class="tactic">Throughput</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="industry-cell">
+                            <a href="industry-saas.html">SaaS</a>
+                        </td>
+                        <td class="matrix-cell high" data-industry="saas" data-lever="price">
+                            <span class="relevance">High</span>
+                            <span class="tactic">Tiered pricing</span>
+                        </td>
+                        <td class="matrix-cell high" data-industry="saas" data-lever="volume">
+                            <span class="relevance">High</span>
+                            <span class="tactic">PLG / Sales motion</span>
+                        </td>
+                        <td class="matrix-cell high" data-industry="saas" data-lever="mix">
+                            <span class="relevance">High</span>
+                            <span class="tactic">Enterprise shift</span>
+                        </td>
+                        <td class="matrix-cell low" data-industry="saas" data-lever="cogs">
+                            <span class="relevance">Low</span>
+                            <span class="tactic">Hosting costs</span>
+                        </td>
+                        <td class="matrix-cell medium" data-industry="saas" data-lever="opex">
+                            <span class="relevance">Med</span>
+                            <span class="tactic">CAC efficiency</span>
+                        </td>
+                        <td class="matrix-cell medium" data-industry="saas" data-lever="ops">
+                            <span class="relevance">Med</span>
+                            <span class="tactic">Onboarding</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="industry-cell">
+                            <a href="industry-retail.html">Retail / CPG</a>
+                        </td>
+                        <td class="matrix-cell medium" data-industry="retail" data-lever="price">
+                            <span class="relevance">Med</span>
+                            <span class="tactic">Promo optimization</span>
+                        </td>
+                        <td class="matrix-cell high" data-industry="retail" data-lever="volume">
+                            <span class="relevance">High</span>
+                            <span class="tactic">Store/channel growth</span>
+                        </td>
+                        <td class="matrix-cell high" data-industry="retail" data-lever="mix">
+                            <span class="relevance">High</span>
+                            <span class="tactic">Private label</span>
+                        </td>
+                        <td class="matrix-cell high" data-industry="retail" data-lever="cogs">
+                            <span class="relevance">High</span>
+                            <span class="tactic">Sourcing / Vendor</span>
+                        </td>
+                        <td class="matrix-cell medium" data-industry="retail" data-lever="opex">
+                            <span class="relevance">Med</span>
+                            <span class="tactic">Store labor</span>
+                        </td>
+                        <td class="matrix-cell high" data-industry="retail" data-lever="ops">
+                            <span class="relevance">High</span>
+                            <span class="tactic">Inventory turns</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="industry-cell">
+                            <a href="industry-services.html">Business Services</a>
+                        </td>
+                        <td class="matrix-cell high" data-industry="services" data-lever="price">
+                            <span class="relevance">High</span>
+                            <span class="tactic">Rate card / Value</span>
+                        </td>
+                        <td class="matrix-cell medium" data-industry="services" data-lever="volume">
+                            <span class="relevance">Med</span>
+                            <span class="tactic">Client acquisition</span>
+                        </td>
+                        <td class="matrix-cell high" data-industry="services" data-lever="mix">
+                            <span class="relevance">High</span>
+                            <span class="tactic">Service upsell</span>
+                        </td>
+                        <td class="matrix-cell low" data-industry="services" data-lever="cogs">
+                            <span class="relevance">Low</span>
+                            <span class="tactic">Subcontractors</span>
+                        </td>
+                        <td class="matrix-cell high" data-industry="services" data-lever="opex">
+                            <span class="relevance">High</span>
+                            <span class="tactic">Utilization</span>
+                        </td>
+                        <td class="matrix-cell medium" data-industry="services" data-lever="ops">
+                            <span class="relevance">Med</span>
+                            <span class="tactic">Delivery model</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="matrix-legend">
+            <h4>Relevance Key</h4>
+            <div class="legend-items">
+                <span class="legend-item high">High Impact</span>
+                <span class="legend-item medium">Medium Impact</span>
+                <span class="legend-item low">Lower Impact</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Hamburger menu
+        const hamburger = document.getElementById('hamburger');
+        const nav = document.getElementById('nav');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            nav.classList.toggle('open');
+        });
+
+        // Matrix cell clicks
+        document.querySelectorAll('.matrix-cell').forEach(cell => {
+            cell.addEventListener('click', () => {
+                const industry = cell.dataset.industry;
+                const lever = cell.dataset.lever;
+                window.location.href = `industry-${industry}.html#${lever}`;
+            });
+        });
+    </script>
+</body>
+</html>
