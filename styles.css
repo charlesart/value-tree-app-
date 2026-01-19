@@ -317,9 +317,9 @@ nav a.disabled {
     background: white;
     border: 2px solid #3498db;
     border-radius: 6px;
-    padding: 0.5rem 0.6rem;
+    padding: 0.4rem 0.5rem 0.6rem 0.5rem;
     width: 100px;
-    min-height: 50px;
+    min-height: 46px;
     height: auto;
     text-align: center;
     position: relative;
@@ -328,7 +328,6 @@ nav a.disabled {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    overflow: hidden;
 }
 
 .node.root {
@@ -387,16 +386,16 @@ nav a.disabled {
 /* Toggle Button - Mobile */
 .toggle-btn {
     position: absolute;
-    bottom: -10px;
+    bottom: -14px;
     left: 50%;
     transform: translateX(-50%);
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
     border-radius: 50%;
     border: 2px solid #3498db;
     background: white;
     color: #3498db;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     font-weight: bold;
     cursor: pointer;
     display: flex;
@@ -405,6 +404,7 @@ nav a.disabled {
     z-index: 10;
     transition: all 0.2s;
     line-height: 1;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.15);
 }
 
 .toggle-btn:active {
@@ -414,7 +414,7 @@ nav a.disabled {
 
 /* Connector Lines */
 .children-wrapper {
-    margin-top: 12px;
+    margin-top: 16px;
     position: relative;
 }
 
