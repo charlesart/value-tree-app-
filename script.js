@@ -815,10 +815,24 @@ function renderTree(node, container) {
         nodeEl.appendChild(toggleBtn);
     }
 
-    // Double-click to open side panel
+    // Double-click to open side panel (desktop)
     nodeEl.addEventListener('dblclick', (e) => {
         e.stopPropagation();
         openSidePanel(node.id);
+    });
+
+    // Double-tap to open side panel (mobile)
+    let lastTap = 0;
+    nodeEl.addEventListener('touchend', (e) => {
+        const currentTime = new Date().getTime();
+        const tapLength = currentTime - lastTap;
+        if (tapLength < 300 && tapLength > 0) {
+            // Double tap detected
+            e.preventDefault();
+            e.stopPropagation();
+            openSidePanel(node.id);
+        }
+        lastTap = currentTime;
     });
 
     // Single click - if panel is open, switch to this node
