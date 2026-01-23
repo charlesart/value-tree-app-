@@ -60,44 +60,44 @@ const defaultRevenueTree = {
         {
             id: 'volume',
             title: 'Volume',
-            description: 'Quantity growth',
+            description: 'Units sold (highest leverage)',
             content: createEmptyContent(),
             level: 1,
             children: [
                 {
-                    id: 'new-customers',
-                    title: 'New Customers',
-                    description: 'Acquisition',
+                    id: 'retention-expansion',
+                    title: 'Retention & Expansion',
+                    description: 'Tier 1: 5-25x ROI vs acquisition',
                     content: createEmptyContent(),
                     level: 2,
                     children: [
-                        { id: 'market-expansion', title: 'Market Expansion', description: 'New geographies', content: createEmptyContent(), level: 3 },
-                        { id: 'lead-gen', title: 'Lead Generation', description: 'Pipeline growth', content: createEmptyContent(), level: 3 },
-                        { id: 'conversion', title: 'Conversion Rate', description: 'Close more deals', content: createEmptyContent(), level: 3 }
+                        { id: 'retention', title: 'Retention', description: '5% increase = 25-95% profit lift', content: createEmptyContent(), level: 3 },
+                        { id: 'expansion-revenue', title: 'Expansion Revenue', description: 'Upsell/cross-sell (60-70% success rate)', content: createEmptyContent(), level: 3 },
+                        { id: 'loyalty-programs', title: 'Loyalty Programs', description: '4.9x ROI, 84% higher stickiness', content: createEmptyContent(), level: 3 }
                     ]
                 },
                 {
-                    id: 'existing-customers',
-                    title: 'Existing Customers',
-                    description: 'Retention & growth',
+                    id: 'new-customer-acquisition',
+                    title: 'New Acquisition',
+                    description: 'Tier 3: Necessary but 5-25x costlier',
                     content: createEmptyContent(),
                     level: 2,
                     children: [
-                        { id: 'retention', title: 'Retention', description: 'Reduce churn', content: createEmptyContent(), level: 3 },
-                        { id: 'upsell', title: 'Upsell', description: 'Upgrade customers', content: createEmptyContent(), level: 3 },
-                        { id: 'cross-sell', title: 'Cross-Sell', description: 'Additional products', content: createEmptyContent(), level: 3 }
+                        { id: 'lead-nurturing', title: 'Lead Nurturing', description: '451% conversion lift with automation', content: createEmptyContent(), level: 3 },
+                        { id: 'funnel-optimization', title: 'Funnel Optimization', description: 'Only 2.3% of leads convert', content: createEmptyContent(), level: 3 },
+                        { id: 'referral-programs', title: 'Referral Programs', description: '30-50% lower CAC', content: createEmptyContent(), level: 3 }
                     ]
                 },
                 {
-                    id: 'frequency',
-                    title: 'Purchase Frequency',
-                    description: 'Buy more often',
+                    id: 'market-penetration',
+                    title: 'Market Penetration',
+                    description: 'Tier 2: Max value from current markets',
                     content: createEmptyContent(),
                     level: 2,
                     children: [
-                        { id: 'engagement', title: 'Engagement', description: 'Increase usage', content: createEmptyContent(), level: 3 },
-                        { id: 'loyalty', title: 'Loyalty Programs', description: 'Reward repeat buyers', content: createEmptyContent(), level: 3 },
-                        { id: 'reminders', title: 'Replenishment', description: 'Timely reminders', content: createEmptyContent(), level: 3 }
+                        { id: 'market-share', title: 'Market Share Gains', description: 'Market power, efficiency, quality signaling', content: createEmptyContent(), level: 3 },
+                        { id: 'distribution-expansion', title: 'Distribution Expansion', description: '3x growth multiplier, 71% top firms use 4+ channels', content: createEmptyContent(), level: 3 },
+                        { id: 'geographic-expansion', title: 'Geographic Expansion', description: 'TAM extension, risk diversification', content: createEmptyContent(), level: 3 }
                     ]
                 }
             ]
@@ -105,44 +105,44 @@ const defaultRevenueTree = {
         {
             id: 'mix',
             title: 'Mix',
-            description: 'Product/customer mix',
+            description: 'Composition shift (silent profit multiplier)',
             content: createEmptyContent(),
             level: 1,
             children: [
                 {
                     id: 'product-mix',
                     title: 'Product Mix',
-                    description: 'Shift to higher-margin',
+                    description: 'What you sell (SKU composition)',
                     content: createEmptyContent(),
                     level: 2,
                     children: [
-                        { id: 'premium-products', title: 'Premium Products', description: 'Higher-value items', content: createEmptyContent(), level: 3 },
-                        { id: 'services', title: 'Services Attach', description: 'Add-on services', content: createEmptyContent(), level: 3 },
-                        { id: 'new-products', title: 'New Products', description: 'Innovation pipeline', content: createEmptyContent(), level: 3 }
+                        { id: 'sku-rationalization', title: 'SKU Rationalization', description: '80% profit from 20% of SKUs', content: createEmptyContent(), level: 3 },
+                        { id: 'premium-tiering', title: 'Premium Tiering', description: 'Good-Better-Best, feature gates', content: createEmptyContent(), level: 3 },
+                        { id: 'bundling-strategy', title: 'Bundling Strategy', description: 'Increase perceived value & attachment', content: createEmptyContent(), level: 3 }
                     ]
                 },
                 {
                     id: 'customer-mix',
                     title: 'Customer Mix',
-                    description: 'Target better segments',
+                    description: 'Who you sell to (segment composition)',
                     content: createEmptyContent(),
                     level: 2,
                     children: [
-                        { id: 'enterprise', title: 'Enterprise Focus', description: 'Larger accounts', content: createEmptyContent(), level: 3 },
-                        { id: 'ideal-profile', title: 'Ideal Customer Profile', description: 'Best-fit targeting', content: createEmptyContent(), level: 3 },
-                        { id: 'strategic-accounts', title: 'Strategic Accounts', description: 'Key relationships', content: createEmptyContent(), level: 3 }
+                        { id: 'segment-profitability', title: 'Segment Profitability', description: 'SMB 12%, Mid-Mkt 36%, Enterprise 35%', content: createEmptyContent(), level: 3 },
+                        { id: 'upmarket-migration', title: 'Upmarket Migration', description: 'SMB → Mid-Market → Enterprise', content: createEmptyContent(), level: 3 },
+                        { id: 'cost-to-serve', title: 'Cost-to-Serve', description: '15-50% varies by segment', content: createEmptyContent(), level: 3 }
                     ]
                 },
                 {
                     id: 'channel-mix',
                     title: 'Channel Mix',
-                    description: 'Optimize channels',
+                    description: 'How you reach them (go-to-market)',
                     content: createEmptyContent(),
                     level: 2,
                     children: [
-                        { id: 'direct', title: 'Direct Sales', description: 'Higher margin channel', content: createEmptyContent(), level: 3 },
-                        { id: 'digital', title: 'Digital Channels', description: 'E-commerce growth', content: createEmptyContent(), level: 3 },
-                        { id: 'partnerships', title: 'Partnerships', description: 'Strategic alliances', content: createEmptyContent(), level: 3 }
+                        { id: 'direct-sales', title: 'Direct Sales', description: 'Highest margin, highest LTV', content: createEmptyContent(), level: 3 },
+                        { id: 'product-led-growth', title: 'Product-Led Growth', description: 'Lowest CAC, self-serve scale', content: createEmptyContent(), level: 3 },
+                        { id: 'partners-resellers', title: 'Partners & Resellers', description: 'Scale with shared margin (40-50%)', content: createEmptyContent(), level: 3 }
                     ]
                 }
             ]
