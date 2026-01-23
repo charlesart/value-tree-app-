@@ -27,44 +27,32 @@ const defaultRevenueTree = {
         {
             id: 'price',
             title: 'Price',
-            description: 'Pricing strategies',
+            description: 'What you charge',
             content: createEmptyContent(),
             level: 1,
             children: [
                 {
-                    id: 'price-increase',
-                    title: 'Price Increase',
-                    description: 'Direct price adjustments',
+                    id: 'pricing-strategy',
+                    title: 'Pricing Strategy',
+                    description: 'What price to charge',
                     content: createEmptyContent(),
                     level: 2,
                     children: [
-                        { id: 'list-price', title: 'List Price', description: 'Base price changes', content: createEmptyContent(), level: 3 },
-                        { id: 'reduce-discounts', title: 'Reduce Discounts', description: 'Discount optimization', content: createEmptyContent(), level: 3 },
-                        { id: 'premium-tiers', title: 'Premium Tiers', description: 'Higher-value offerings', content: createEmptyContent(), level: 3 }
+                        { id: 'cost-based', title: 'Cost-Based', description: 'Cost plus, Target return', content: createEmptyContent(), level: 3 },
+                        { id: 'value-based', title: 'Value-Based', description: 'Economic value, Perceived value, WTP research', content: createEmptyContent(), level: 3 },
+                        { id: 'competition-based', title: 'Competition-Based', description: 'Premium, Parity, Penetration', content: createEmptyContent(), level: 3 }
                     ]
                 },
                 {
-                    id: 'price-optimization',
-                    title: 'Price Optimization',
-                    description: 'Strategic pricing',
+                    id: 'price-realization',
+                    title: 'Price Realization',
+                    description: 'Actually getting that price',
                     content: createEmptyContent(),
                     level: 2,
                     children: [
-                        { id: 'dynamic-pricing', title: 'Dynamic Pricing', description: 'Real-time adjustments', content: createEmptyContent(), level: 3 },
-                        { id: 'value-pricing', title: 'Value-Based Pricing', description: 'Price to value delivered', content: createEmptyContent(), level: 3 },
-                        { id: 'bundling', title: 'Bundling', description: 'Package offerings', content: createEmptyContent(), level: 3 }
-                    ]
-                },
-                {
-                    id: 'price-architecture',
-                    title: 'Price Architecture',
-                    description: 'Pricing structure',
-                    content: createEmptyContent(),
-                    level: 2,
-                    children: [
-                        { id: 'tiered-pricing', title: 'Tiered Pricing', description: 'Good/Better/Best', content: createEmptyContent(), level: 3 },
-                        { id: 'subscription', title: 'Subscription Models', description: 'Recurring revenue', content: createEmptyContent(), level: 3 },
-                        { id: 'usage-based', title: 'Usage-Based', description: 'Pay per use', content: createEmptyContent(), level: 3 }
+                        { id: 'price-architecture', title: 'Price Architecture', description: 'Good-Better-Best, Usage-based, Subscription', content: createEmptyContent(), level: 3 },
+                        { id: 'price-execution', title: 'Price Execution', description: 'Discount controls, Deal approval, Sales enablement', content: createEmptyContent(), level: 3 },
+                        { id: 'price-monitoring', title: 'Price Monitoring', description: 'Invoice → Pocket price, Identify leakage, Margin tracking', content: createEmptyContent(), level: 3 }
                     ]
                 }
             ]
