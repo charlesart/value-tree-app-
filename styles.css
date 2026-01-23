@@ -317,9 +317,9 @@ nav a.disabled {
     background: white;
     border: 2px solid #3498db;
     border-radius: 6px;
-    padding: 0.4rem 0.5rem 0.6rem 0.5rem;
-    width: 100px;
-    min-height: 46px;
+    padding: 0.5rem 0.5rem 0.7rem 0.5rem;
+    width: 120px;
+    min-height: 55px;
     height: auto;
     text-align: center;
     position: relative;
@@ -335,30 +335,30 @@ nav a.disabled {
     color: white;
     border-color: #2980b9;
     font-weight: 600;
-    width: 120px;
-    height: 55px;
+    width: 140px;
+    min-height: 60px;
     padding: 0.6rem 1rem;
 }
 
 .node.level-1 {
     background: #e8f4fc;
     border-color: #3498db;
-    width: 90px;
-    height: 50px;
+    width: 120px;
+    min-height: 55px;
 }
 
 .node.level-2 {
     background: #fff9e6;
     border-color: #f39c12;
-    width: 100px;
-    height: 50px;
+    width: 130px;
+    min-height: 55px;
 }
 
 .node.level-3 {
     background: #e8f8f5;
     border-color: #1abc9c;
-    width: 90px;
-    height: 50px;
+    width: 130px;
+    min-height: 60px;
 }
 
 .node-title {
@@ -508,30 +508,30 @@ nav a.disabled {
 
     .node {
         padding: 0.75rem 1rem;
-        width: 110px;
-        height: 58px;
+        width: 140px;
+        min-height: 65px;
         border-radius: 8px;
     }
 
     .node.root {
-        width: 160px;
-        height: 62px;
+        width: 170px;
+        min-height: 70px;
         padding: 0.9rem 1.5rem;
     }
 
     .node.level-1 {
-        width: 110px;
-        height: 58px;
+        width: 140px;
+        min-height: 65px;
     }
 
     .node.level-2 {
-        width: 120px;
-        height: 58px;
+        width: 150px;
+        min-height: 65px;
     }
 
     .node.level-3 {
-        width: 110px;
-        height: 58px;
+        width: 150px;
+        min-height: 70px;
     }
 
     .node-title {
@@ -539,13 +539,13 @@ nav a.disabled {
     }
 
     .node-description {
-        font-size: 0.65rem;
+        font-size: 0.7rem;
     }
 
     .toggle-btn {
         width: 22px;
         height: 22px;
-        bottom: -11px;
+        bottom: -14px;
         font-size: 1rem;
     }
 
@@ -605,30 +605,30 @@ nav a.disabled {
     }
 
     .node {
-        padding: 1rem 1.5rem;
-        width: 140px;
-        height: 70px;
+        padding: 1rem 1.25rem;
+        width: 160px;
+        min-height: 75px;
     }
 
     .node.root {
         width: 200px;
-        height: 75px;
+        min-height: 80px;
         padding: 1.25rem 2rem;
     }
 
     .node.level-1 {
-        width: 140px;
-        height: 70px;
+        width: 160px;
+        min-height: 75px;
     }
 
     .node.level-2 {
-        width: 150px;
-        height: 70px;
+        width: 170px;
+        min-height: 75px;
     }
 
     .node.level-3 {
-        width: 140px;
-        height: 70px;
+        width: 170px;
+        min-height: 80px;
     }
 
     .node-title {
@@ -636,13 +636,13 @@ nav a.disabled {
     }
 
     .node-description {
-        font-size: 0.75rem;
+        font-size: 0.8rem;
     }
 
     .toggle-btn {
         width: 24px;
         height: 24px;
-        bottom: -12px;
+        bottom: -16px;
         font-size: 1.1rem;
     }
 
