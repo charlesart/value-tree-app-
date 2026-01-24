@@ -38,7 +38,57 @@ const defaultRevenueTree = {
                     content: createEmptyContent(),
                     level: 2,
                     children: [
-                        { id: 'cost-based', title: 'Cost-Based', description: 'Cost plus, Target return', content: createEmptyContent(), level: 3 },
+                        {
+                            id: 'cost-based',
+                            title: 'Cost-Based',
+                            description: 'Cost plus, Target return',
+                            content: {
+                                overview: 'Cost-based pricing sets prices by adding a markup to the cost of producing a product or service. Two main approaches: (1) Cost-Plus Pricing adds a fixed percentage margin to total costs, and (2) Target Return Pricing sets price to achieve a specific ROI on invested capital. This is the simplest pricing method but often leaves money on the table by ignoring customer willingness-to-pay.',
+                                contributionToValue: 'Ensures baseline profitability on every unit sold. Provides pricing floor and margin protection. Most useful for commoditized products, cost-plus contracts (government, construction), or when cost structures are complex and value is hard to quantify. However, rarely maximizes value—typically captures only 30-50% of potential margin vs. value-based approaches.',
+                                diagnostic: {
+                                    keyQuestions: [
+                                        'What is our fully-loaded cost per unit (materials, labor, overhead, delivery)?',
+                                        'What target margin or ROI do we need to justify the investment?',
+                                        'How do our costs compare to competitors? Are we cost-advantaged or disadvantaged?',
+                                        'Is the market commoditized enough that cost-plus is appropriate, or are we leaving value on the table?',
+                                        'Do we have accurate cost allocation across products/services?'
+                                    ],
+                                    implementationSteps: [
+                                        'Calculate fully-loaded unit cost (direct + allocated indirect costs)',
+                                        'Determine target margin based on required ROI or industry benchmarks',
+                                        'Set price = Cost × (1 + Markup%) or Price = Cost + (Investment × Target ROI / Volume)',
+                                        'Validate against market prices—if significantly above, re-examine costs or value proposition',
+                                        'Build in cost escalation clauses for long-term contracts'
+                                    ],
+                                    pitfalls: [
+                                        'Ignores customer willingness-to-pay—may underprice differentiated offerings',
+                                        'Cost allocation errors cascade into pricing errors',
+                                        'Creates "cost-plus culture" that reduces pressure to control costs',
+                                        'Vulnerable to competitors with lower cost structures',
+                                        'Doesn\'t account for demand elasticity or competitive dynamics'
+                                    ]
+                                },
+                                logicalFlow: 'Identify all costs → Allocate to units → Add target margin → Set price → Validate vs. market → Adjust if needed',
+                                caseExamples: [
+                                    {
+                                        company: 'Defense Contractors',
+                                        situation: 'Government contracts often mandate cost-plus pricing with audited costs and fixed margins (typically 8-15%)',
+                                        result: 'Guaranteed profitability but limited upside; incentivizes cost inflation rather than efficiency'
+                                    },
+                                    {
+                                        company: 'Construction Industry',
+                                        situation: 'Bid projects using cost estimates plus markup (10-20% typical)',
+                                        result: 'Standard practice but sophisticated firms layer in value-based elements for differentiated capabilities'
+                                    },
+                                    {
+                                        company: 'Commodity Manufacturing',
+                                        situation: 'Steel, chemicals, basic components where differentiation is minimal',
+                                        result: 'Cost-plus is appropriate here—focus shifts to cost reduction as the profit lever'
+                                    }
+                                ]
+                            },
+                            level: 3
+                        },
                         { id: 'value-based', title: 'Value-Based', description: 'Economic value, Perceived value, WTP research', content: createEmptyContent(), level: 3 },
                         { id: 'competition-based', title: 'Competition-Based', description: 'Premium, Parity, Penetration', content: createEmptyContent(), level: 3 }
                     ]
